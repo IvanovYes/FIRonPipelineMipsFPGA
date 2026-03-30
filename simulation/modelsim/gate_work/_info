@@ -1,0 +1,53 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1\PipelineMips\simulation\modelsim
+vPipelineMips
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+IC8@9>4_HBnESL^U29mN[P0
+VX@^;?LoRo?K_;feBdlK^_0
+S1
+Z2 dC:\altera\13.1\PipelineMips\simulation\modelsim
+w1772531417
+8PipelineMips.svo
+FPipelineMips.svo
+L0 31
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-sv -work work -O0
+n@pipeline@mips
+!i10b 1
+!s100 TzHndMYHFT^>hIiA[9gR71
+!s105 PipelineMips_svo_unit
+!s85 0
+!s108 1772531427.795000
+!s107 PipelineMips.svo|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+.|PipelineMips.svo|
+!s101 -O0
+!s92 -sv -work work +incdir+. -O0
+vTestPipelineMips
+R1
+!i10b 1
+!s100 bD@j[:?hUziHOO=WKML_=3
+I^EaiIZNShBZ6dCL8Sm[dN0
+V2Ca340@PRdP41NJY`lFe:0
+!s105 TestPipelineMips_sv_unit
+S1
+R2
+w1771431181
+8C:/altera/13.1/PipelineMips/TestPipelineMips.sv
+FC:/altera/13.1/PipelineMips/TestPipelineMips.sv
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1772531429.019000
+!s107 C:/altera/13.1/PipelineMips/TestPipelineMips.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/altera/13.1/PipelineMips|C:/altera/13.1/PipelineMips/TestPipelineMips.sv|
+!s101 -O0
+R4
+!s92 -sv -work work +incdir+C:/altera/13.1/PipelineMips -O0
+n@test@pipeline@mips

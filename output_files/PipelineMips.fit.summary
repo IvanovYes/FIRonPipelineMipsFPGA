@@ -1,0 +1,20 @@
+Fitter Status : Successful - Tue Mar 03 12:49:57 2026
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Revision Name : PipelineMips
+Top-level Entity Name : PipelineMips
+Family : Cyclone IV GX
+Device : EP4CGX30CF23C6
+Timing Models : Final
+Total logic elements : 7,266 / 29,440 ( 25 % )
+    Total combinational functions : 4,838 / 29,440 ( 16 % )
+    Dedicated logic registers : 5,464 / 29,440 ( 19 % )
+Total registers : 5464
+Total pins : 162 / 307 ( 53 % )
+Total virtual pins : 0
+Total memory bits : 2,048 / 1,105,920 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 160 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 4 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 4 ( 0 % )
+Total PLLs : 0 / 6 ( 0 % )

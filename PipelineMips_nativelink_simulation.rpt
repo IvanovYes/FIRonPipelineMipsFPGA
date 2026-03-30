@@ -1,0 +1,92 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneivgx
+Quartus root          :  c:/altera/13.1/quartus/bin64/
+Quartus sim root      :  c:/altera/13.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  systemverilog
+Simulation Mode       :  GUI
+Sim Output File       :  PipelineMips.svo
+Sim SDF file          :  PipelineMips__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/altera/13.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File PipelineMips_run_msim_gate_systemverilog.do already exists - backing up current file as PipelineMips_run_msim_gate_systemverilog.do.bak11
+Probing transcript
+ModelSim-Altera Info: # Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+ModelSim-Altera Info: # do PipelineMips_run_msim_gate_systemverilog.do 
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Warning: # ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+ModelSim-Altera Info: #          Updated modelsim.ini.
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -sv -work work +incdir+. {PipelineMips.svo}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module PipelineMips
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	PipelineMips
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -sv -work work +incdir+C:/altera/13.1/PipelineMips {C:/altera/13.1/PipelineMips/TestPipelineMips.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module TestPipelineMips
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	TestPipelineMips
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_mf_ver -L altera_ver -L lpm_ver -L sgate_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L gate_work -L work -voptargs="+acc"  TestPipelineMips
+ModelSim-Altera Info: # vsim +transport_int_delays +transport_path_delays -L altera_mf_ver -L altera_ver -L lpm_ver -L sgate_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps TestPipelineMips 
+ModelSim-Altera Info: # Loading sv_std.std
+ModelSim-Altera Info: # Loading work.TestPipelineMips
+ModelSim-Altera Info: # Loading work.PipelineMips
+ModelSim-Altera Info: # Loading cycloneiv_ver.cycloneiv_io_obuf
+ModelSim-Altera Info: # Loading cycloneiv_ver.cycloneiv_io_ibuf
+ModelSim-Altera Info: # Loading cycloneiv_ver.cycloneiv_clkctrl
+ModelSim-Altera Info: # Loading cycloneiv_ver.cycloneiv_mux41
+ModelSim-Altera Info: # Loading cycloneiv_ver.cycloneiv_ena_reg
+ModelSim-Altera Info: # Loading cycloneiv_ver.cycloneiv_lcell_comb
+ModelSim-Altera Info: # Loading altera_ver.dffeas
+ModelSim-Altera Info: # Loading cycloneiv_ver.cycloneiv_ram_block
+ModelSim-Altera Info: # Loading cycloneiv_ver.cycloneiv_ram_register
+ModelSim-Altera Info: # Loading cycloneiv_ver.cycloneiv_ram_pulse_generator
+ModelSim-Altera Info: # SDF 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Loading instances from PipelineMips_v.sdo
+ModelSim-Altera Info: # Loading altera_ver.PRIM_GDFF_LOW
+ModelSim-Altera Warning: # ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+ModelSim-Altera Info: # This may because you are loading cell libraries which are not recommended with
+ModelSim-Altera Info: # the ModelSim Altera version. Expect performance to be adversely affected.
+ModelSim-Altera Info: # Loading timing data from PipelineMips_v.sdo
+ModelSim-Altera Info: # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /TestPipelineMips File: C:/altera/13.1/PipelineMips/TestPipelineMips.sv
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # add wave *
+ModelSim-Altera Warning: # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: #           File in use by: ACER1  Hostname: LAPTOP-0A8LG1PG  ProcessID: 8012
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: #           Attempting to use alternate WLF file "./wlfti6ayka".
+ModelSim-Altera Warning: # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: #           Using alternate file: ./wlfti6ayka
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # view structure
+ModelSim-Altera Info: # .main_pane.structure.interior.cs.body.struct
+ModelSim-Altera Info: # view signals
+ModelSim-Altera Info: # .main_pane.objects.interior.cs.body.tree
+ModelSim-Altera Info: # run -all
+ModelSim-Altera Info: # Break in Module TestPipelineMips at C:/altera/13.1/PipelineMips/TestPipelineMips.sv line 28
+ModelSim-Altera Info: # Simulation Breakpoint: Break in Module TestPipelineMips at C:/altera/13.1/PipelineMips/TestPipelineMips.sv line 28
+ModelSim-Altera Info: # MACRO ./PipelineMips_run_msim_gate_systemverilog.do PAUSED at line 17
+Info: NativeLink simulation flow was successful

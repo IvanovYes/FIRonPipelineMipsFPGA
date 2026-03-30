@@ -1,0 +1,637 @@
+Analysis & Synthesis report for PipelineMips
+Tue Mar 03 12:48:47 2026
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for ROM:instruction_memory|altsyncram:memory_rtl_0|altsyncram_qv61:auto_generated
+ 15. Parameter Settings for Inferred Entity Instance: ROM:instruction_memory|altsyncram:memory_rtl_0
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "ProgrammCounter:pc_unit"
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Mar 03 12:48:47 2026      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; PipelineMips                               ;
+; Top-level Entity Name              ; PipelineMips                               ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 9,894                                      ;
+;     Total combinational functions  ; 4,837                                      ;
+;     Dedicated logic registers      ; 5,464                                      ;
+; Total registers                    ; 5464                                       ;
+; Total pins                         ; 162                                        ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 2,048                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; PipelineMips       ; PipelineMips       ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Optimization Technique                                                     ; Area               ; Balanced           ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path       ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                         ; Library ;
++----------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------+---------+
+; PipelineMips.sv                        ; yes             ; User SystemVerilog HDL File                           ; C:/altera/13.1/PipelineMips/PipelineMips.sv                          ;         ;
+; RegFile.sv                             ; yes             ; User SystemVerilog HDL File                           ; C:/altera/13.1/PipelineMips/RegFile.sv                               ;         ;
+; ALU.sv                                 ; yes             ; User SystemVerilog HDL File                           ; C:/altera/13.1/PipelineMips/ALU.sv                                   ;         ;
+; ControlUnit.sv                         ; yes             ; User SystemVerilog HDL File                           ; C:/altera/13.1/PipelineMips/ControlUnit.sv                           ;         ;
+; RAM.sv                                 ; yes             ; User SystemVerilog HDL File                           ; C:/altera/13.1/PipelineMips/RAM.sv                                   ;         ;
+; ROM.sv                                 ; yes             ; User SystemVerilog HDL File                           ; C:/altera/13.1/PipelineMips/ROM.sv                                   ;         ;
+; ProgrammCounter.sv                     ; yes             ; User SystemVerilog HDL File                           ; C:/altera/13.1/PipelineMips/ProgrammCounter.sv                       ;         ;
+; instruction_test.dat                   ; yes             ; Auto-Found Unspecified File                           ; C:/altera/13.1/PipelineMips/instruction_test.dat                     ;         ;
+; data_test.dat                          ; yes             ; Auto-Found Unspecified File                           ; C:/altera/13.1/PipelineMips/data_test.dat                            ;         ;
+; altsyncram.tdf                         ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc                  ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                            ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                         ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal131.inc                         ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc        ;         ;
+; a_rdenreg.inc                          ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                             ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                             ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                           ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_qv61.tdf                 ; yes             ; Auto-Generated Megafunction                           ; C:/altera/13.1/PipelineMips/db/altsyncram_qv61.tdf                   ;         ;
+; db/pipelinemips.ram0_rom_16bd8.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/altera/13.1/PipelineMips/db/pipelinemips.ram0_rom_16bd8.hdl.mif   ;         ;
++----------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 162              ;
+; Total memory bits        ; 2048             ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; clk~input        ;
+; Maximum fan-out          ; 5496             ;
+; Total fan-out            ; 39386            ;
+; Average fan-out          ; 3.70             ;
++--------------------------+------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                            ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+; |PipelineMips                             ; 4837 (94)         ; 5464 (343)   ; 2048        ; 0            ; 0       ; 0         ; 0         ; 162  ; 0            ; |PipelineMips                                                                               ; work         ;
+;    |ALU:alu_unit|                         ; 245 (245)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |PipelineMips|ALU:alu_unit                                                                  ; work         ;
+;    |ControlUnit:controller|               ; 22 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |PipelineMips|ControlUnit:controller                                                        ; work         ;
+;    |ProgrammCounter:pc_unit|              ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |PipelineMips|ProgrammCounter:pc_unit                                                       ; work         ;
+;    |RAM:data_mem|                         ; 3011 (3011)       ; 4096 (4096)  ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |PipelineMips|RAM:data_mem                                                                  ; work         ;
+;    |ROM:instruction_memory|               ; 32 (32)           ; 1 (1)        ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |PipelineMips|ROM:instruction_memory                                                        ; work         ;
+;       |altsyncram:memory_rtl_0|           ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |PipelineMips|ROM:instruction_memory|altsyncram:memory_rtl_0                                ; work         ;
+;          |altsyncram_qv61:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |PipelineMips|ROM:instruction_memory|altsyncram:memory_rtl_0|altsyncram_qv61:auto_generated ; work         ;
+;    |RegFile:registers_unit|               ; 1398 (1398)       ; 1024 (1024)  ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |PipelineMips|RegFile:registers_unit                                                        ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                   ;
++------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------------------------+
+; Name                                                                                     ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                    ;
++------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------------------------+
+; ROM:instruction_memory|altsyncram:memory_rtl_0|altsyncram_qv61:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 64           ; 32           ; --           ; --           ; 2048 ; db/PipelineMips.ram0_ROM_16bd8.hdl.mif ;
++------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Registers Removed During Synthesis                                  ;
++----------------------------------------+----------------------------+
+; Register name                          ; Reason for Removal         ;
++----------------------------------------+----------------------------+
+; ProgrammCounter:pc_unit|pc_current[31] ; Merged with if_id_reg[63]  ;
+; ProgrammCounter:pc_unit|pc_current[30] ; Merged with if_id_reg[62]  ;
+; ProgrammCounter:pc_unit|pc_current[29] ; Merged with if_id_reg[61]  ;
+; ProgrammCounter:pc_unit|pc_current[28] ; Merged with if_id_reg[60]  ;
+; ProgrammCounter:pc_unit|pc_current[27] ; Merged with if_id_reg[59]  ;
+; ProgrammCounter:pc_unit|pc_current[26] ; Merged with if_id_reg[58]  ;
+; ProgrammCounter:pc_unit|pc_current[25] ; Merged with if_id_reg[57]  ;
+; ProgrammCounter:pc_unit|pc_current[24] ; Merged with if_id_reg[56]  ;
+; ProgrammCounter:pc_unit|pc_current[23] ; Merged with if_id_reg[55]  ;
+; ProgrammCounter:pc_unit|pc_current[22] ; Merged with if_id_reg[54]  ;
+; ProgrammCounter:pc_unit|pc_current[21] ; Merged with if_id_reg[53]  ;
+; ProgrammCounter:pc_unit|pc_current[20] ; Merged with if_id_reg[52]  ;
+; ProgrammCounter:pc_unit|pc_current[19] ; Merged with if_id_reg[51]  ;
+; ProgrammCounter:pc_unit|pc_current[18] ; Merged with if_id_reg[50]  ;
+; ProgrammCounter:pc_unit|pc_current[17] ; Merged with if_id_reg[49]  ;
+; ProgrammCounter:pc_unit|pc_current[16] ; Merged with if_id_reg[48]  ;
+; ProgrammCounter:pc_unit|pc_current[15] ; Merged with if_id_reg[47]  ;
+; ProgrammCounter:pc_unit|pc_current[14] ; Merged with if_id_reg[46]  ;
+; ProgrammCounter:pc_unit|pc_current[13] ; Merged with if_id_reg[45]  ;
+; ProgrammCounter:pc_unit|pc_current[12] ; Merged with if_id_reg[44]  ;
+; ProgrammCounter:pc_unit|pc_current[11] ; Merged with if_id_reg[43]  ;
+; ProgrammCounter:pc_unit|pc_current[10] ; Merged with if_id_reg[42]  ;
+; ProgrammCounter:pc_unit|pc_current[9]  ; Merged with if_id_reg[41]  ;
+; ProgrammCounter:pc_unit|pc_current[8]  ; Merged with if_id_reg[40]  ;
+; ProgrammCounter:pc_unit|pc_current[7]  ; Merged with if_id_reg[39]  ;
+; ProgrammCounter:pc_unit|pc_current[6]  ; Merged with if_id_reg[38]  ;
+; ProgrammCounter:pc_unit|pc_current[5]  ; Merged with if_id_reg[37]  ;
+; ProgrammCounter:pc_unit|pc_current[4]  ; Merged with if_id_reg[36]  ;
+; ProgrammCounter:pc_unit|pc_current[3]  ; Merged with if_id_reg[35]  ;
+; ProgrammCounter:pc_unit|pc_current[2]  ; Merged with if_id_reg[34]  ;
+; ProgrammCounter:pc_unit|pc_current[1]  ; Merged with if_id_reg[33]  ;
+; ProgrammCounter:pc_unit|pc_current[0]  ; Merged with if_id_reg[32]  ;
+; if_id_reg[33]                          ; Merged with if_id_reg[32]  ;
+; ex_mem_reg[69]                         ; Merged with ex_mem_reg[68] ;
+; id_ex_reg[129]                         ; Merged with id_ex_reg[128] ;
+; Total Number of Removed Registers = 35 ;                            ;
++----------------------------------------+----------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 5464  ;
+; Number of registers using Synchronous Clear  ; 64    ;
+; Number of registers using Synchronous Load   ; 26    ;
+; Number of registers using Asynchronous Clear ; 4440  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5124  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Inverted Register Statistics                        ;
++-------------------------------------------+---------+
+; Inverted Register                         ; Fan out ;
++-------------------------------------------+---------+
+; RAM:data_mem|memory[4][0]                 ; 1       ;
+; RAM:data_mem|memory[9][0]                 ; 1       ;
+; RAM:data_mem|memory[8][0]                 ; 1       ;
+; RAM:data_mem|memory[1][0]                 ; 1       ;
+; RAM:data_mem|memory[2][0]                 ; 1       ;
+; RAM:data_mem|memory[3][0]                 ; 1       ;
+; RAM:data_mem|memory[9][1]                 ; 1       ;
+; RAM:data_mem|memory[10][1]                ; 1       ;
+; RAM:data_mem|memory[8][1]                 ; 1       ;
+; RAM:data_mem|memory[1][1]                 ; 1       ;
+; RAM:data_mem|memory[6][1]                 ; 1       ;
+; RAM:data_mem|memory[4][1]                 ; 1       ;
+; RAM:data_mem|memory[3][1]                 ; 1       ;
+; RAM:data_mem|memory[9][2]                 ; 1       ;
+; RAM:data_mem|memory[8][2]                 ; 1       ;
+; RAM:data_mem|memory[2][2]                 ; 1       ;
+; RAM:data_mem|memory[7][2]                 ; 1       ;
+; RAM:data_mem|memory[4][2]                 ; 1       ;
+; RAM:data_mem|memory[1][2]                 ; 1       ;
+; RAM:data_mem|memory[0][2]                 ; 1       ;
+; RAM:data_mem|memory[6][3]                 ; 1       ;
+; RAM:data_mem|memory[2][3]                 ; 1       ;
+; RAM:data_mem|memory[8][3]                 ; 1       ;
+; RAM:data_mem|memory[4][3]                 ; 1       ;
+; RAM:data_mem|memory[0][3]                 ; 1       ;
+; RAM:data_mem|memory[5][3]                 ; 1       ;
+; RAM:data_mem|memory[10][3]                ; 1       ;
+; RAM:data_mem|memory[6][4]                 ; 1       ;
+; RAM:data_mem|memory[9][4]                 ; 1       ;
+; RAM:data_mem|memory[8][4]                 ; 1       ;
+; RAM:data_mem|memory[7][4]                 ; 1       ;
+; RAM:data_mem|memory[9][5]                 ; 1       ;
+; RAM:data_mem|memory[8][5]                 ; 1       ;
+; RAM:data_mem|memory[6][5]                 ; 1       ;
+; RAM:data_mem|memory[2][5]                 ; 1       ;
+; RAM:data_mem|memory[6][6]                 ; 1       ;
+; RAM:data_mem|memory[2][6]                 ; 1       ;
+; RAM:data_mem|memory[9][6]                 ; 1       ;
+; RAM:data_mem|memory[8][6]                 ; 1       ;
+; RAM:data_mem|memory[9][7]                 ; 1       ;
+; RAM:data_mem|memory[6][7]                 ; 1       ;
+; RAM:data_mem|memory[8][7]                 ; 1       ;
+; RAM:data_mem|memory[2][7]                 ; 1       ;
+; RAM:data_mem|memory[9][8]                 ; 1       ;
+; RAM:data_mem|memory[8][8]                 ; 1       ;
+; RAM:data_mem|memory[6][8]                 ; 1       ;
+; RAM:data_mem|memory[2][8]                 ; 1       ;
+; RAM:data_mem|memory[9][9]                 ; 1       ;
+; RAM:data_mem|memory[8][9]                 ; 1       ;
+; RAM:data_mem|memory[6][9]                 ; 1       ;
+; RAM:data_mem|memory[2][9]                 ; 1       ;
+; RAM:data_mem|memory[9][10]                ; 1       ;
+; RAM:data_mem|memory[6][10]                ; 1       ;
+; RAM:data_mem|memory[8][10]                ; 1       ;
+; RAM:data_mem|memory[2][10]                ; 1       ;
+; RAM:data_mem|memory[9][11]                ; 1       ;
+; RAM:data_mem|memory[8][11]                ; 1       ;
+; RAM:data_mem|memory[6][11]                ; 1       ;
+; RAM:data_mem|memory[2][11]                ; 1       ;
+; RAM:data_mem|memory[9][12]                ; 1       ;
+; RAM:data_mem|memory[8][12]                ; 1       ;
+; RAM:data_mem|memory[6][12]                ; 1       ;
+; RAM:data_mem|memory[2][12]                ; 1       ;
+; RAM:data_mem|memory[9][13]                ; 1       ;
+; RAM:data_mem|memory[6][13]                ; 1       ;
+; RAM:data_mem|memory[8][13]                ; 1       ;
+; RAM:data_mem|memory[2][13]                ; 1       ;
+; RAM:data_mem|memory[9][14]                ; 1       ;
+; RAM:data_mem|memory[8][14]                ; 1       ;
+; RAM:data_mem|memory[6][14]                ; 1       ;
+; RAM:data_mem|memory[2][14]                ; 1       ;
+; RAM:data_mem|memory[9][15]                ; 1       ;
+; RAM:data_mem|memory[8][15]                ; 1       ;
+; RAM:data_mem|memory[6][15]                ; 1       ;
+; RAM:data_mem|memory[2][15]                ; 1       ;
+; RAM:data_mem|memory[9][16]                ; 1       ;
+; RAM:data_mem|memory[6][16]                ; 1       ;
+; RAM:data_mem|memory[8][16]                ; 1       ;
+; RAM:data_mem|memory[2][16]                ; 1       ;
+; RAM:data_mem|memory[9][17]                ; 1       ;
+; RAM:data_mem|memory[8][17]                ; 1       ;
+; RAM:data_mem|memory[6][17]                ; 1       ;
+; RAM:data_mem|memory[2][17]                ; 1       ;
+; RAM:data_mem|memory[9][18]                ; 1       ;
+; RAM:data_mem|memory[8][18]                ; 1       ;
+; RAM:data_mem|memory[6][18]                ; 1       ;
+; RAM:data_mem|memory[2][18]                ; 1       ;
+; RAM:data_mem|memory[9][19]                ; 1       ;
+; RAM:data_mem|memory[6][19]                ; 1       ;
+; RAM:data_mem|memory[8][19]                ; 1       ;
+; RAM:data_mem|memory[2][19]                ; 1       ;
+; RAM:data_mem|memory[9][20]                ; 1       ;
+; RAM:data_mem|memory[8][20]                ; 1       ;
+; RAM:data_mem|memory[6][20]                ; 1       ;
+; RAM:data_mem|memory[2][20]                ; 1       ;
+; RAM:data_mem|memory[9][21]                ; 1       ;
+; RAM:data_mem|memory[8][21]                ; 1       ;
+; RAM:data_mem|memory[6][21]                ; 1       ;
+; RAM:data_mem|memory[2][21]                ; 1       ;
+; RAM:data_mem|memory[9][22]                ; 1       ;
+; Total number of inverted registers = 139* ;         ;
++-------------------------------------------+---------+
+* Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
+
+
++---------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                  ;
++------------------+-------------------------------------+------+
+; Register Name    ; Megafunction                        ; Type ;
++------------------+-------------------------------------+------+
+; if_id_reg[0..31] ; ROM:instruction_memory|memory_rtl_0 ; RAM  ;
++------------------+-------------------------------------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |PipelineMips|if_id_reg[62]      ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |PipelineMips|if_id_reg[50]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; No         ; |PipelineMips|ALU:alu_unit|Add0  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |PipelineMips|ALU:alu_unit|Add0  ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 30 LEs               ; 45 LEs                 ; No         ; |PipelineMips|ALU:alu_unit|Mux26 ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; No         ; |PipelineMips|ALU:alu_unit|Mux8  ;
+; 128:1              ; 32 bits   ; 2720 LEs      ; 2720 LEs             ; 0 LEs                  ; No         ; |PipelineMips|RAM:data_mem|Mux26 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Source assignments for ROM:instruction_memory|altsyncram:memory_rtl_0|altsyncram_qv61:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                     ;
++---------------------------------+--------------------+------+----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                      ;
++---------------------------------+--------------------+------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ROM:instruction_memory|altsyncram:memory_rtl_0 ;
++------------------------------------+----------------------------------------+-------------------+
+; Parameter Name                     ; Value                                  ; Type              ;
++------------------------------------+----------------------------------------+-------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                      ; Untyped           ;
+; AUTO_CARRY_CHAINS                  ; ON                                     ; AUTO_CARRY        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                    ; IGNORE_CARRY      ;
+; AUTO_CASCADE_CHAINS                ; ON                                     ; AUTO_CASCADE      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                    ; IGNORE_CASCADE    ;
+; WIDTH_BYTEENA                      ; 1                                      ; Untyped           ;
+; OPERATION_MODE                     ; ROM                                    ; Untyped           ;
+; WIDTH_A                            ; 32                                     ; Untyped           ;
+; WIDTHAD_A                          ; 6                                      ; Untyped           ;
+; NUMWORDS_A                         ; 64                                     ; Untyped           ;
+; OUTDATA_REG_A                      ; UNREGISTERED                           ; Untyped           ;
+; ADDRESS_ACLR_A                     ; NONE                                   ; Untyped           ;
+; OUTDATA_ACLR_A                     ; NONE                                   ; Untyped           ;
+; WRCONTROL_ACLR_A                   ; NONE                                   ; Untyped           ;
+; INDATA_ACLR_A                      ; NONE                                   ; Untyped           ;
+; BYTEENA_ACLR_A                     ; NONE                                   ; Untyped           ;
+; WIDTH_B                            ; 1                                      ; Untyped           ;
+; WIDTHAD_B                          ; 1                                      ; Untyped           ;
+; NUMWORDS_B                         ; 1                                      ; Untyped           ;
+; INDATA_REG_B                       ; CLOCK1                                 ; Untyped           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                 ; Untyped           ;
+; RDCONTROL_REG_B                    ; CLOCK1                                 ; Untyped           ;
+; ADDRESS_REG_B                      ; CLOCK1                                 ; Untyped           ;
+; OUTDATA_REG_B                      ; UNREGISTERED                           ; Untyped           ;
+; BYTEENA_REG_B                      ; CLOCK1                                 ; Untyped           ;
+; INDATA_ACLR_B                      ; NONE                                   ; Untyped           ;
+; WRCONTROL_ACLR_B                   ; NONE                                   ; Untyped           ;
+; ADDRESS_ACLR_B                     ; NONE                                   ; Untyped           ;
+; OUTDATA_ACLR_B                     ; NONE                                   ; Untyped           ;
+; RDCONTROL_ACLR_B                   ; NONE                                   ; Untyped           ;
+; BYTEENA_ACLR_B                     ; NONE                                   ; Untyped           ;
+; WIDTH_BYTEENA_A                    ; 1                                      ; Untyped           ;
+; WIDTH_BYTEENA_B                    ; 1                                      ; Untyped           ;
+; RAM_BLOCK_TYPE                     ; AUTO                                   ; Untyped           ;
+; BYTE_SIZE                          ; 8                                      ; Untyped           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                              ; Untyped           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                   ; Untyped           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                   ; Untyped           ;
+; INIT_FILE                          ; db/PipelineMips.ram0_ROM_16bd8.hdl.mif ; Untyped           ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                 ; Untyped           ;
+; MAXIMUM_DEPTH                      ; 0                                      ; Untyped           ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                 ; Untyped           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                 ; Untyped           ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                 ; Untyped           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                 ; Untyped           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                        ; Untyped           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                        ; Untyped           ;
+; ENABLE_ECC                         ; FALSE                                  ; Untyped           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                  ; Untyped           ;
+; WIDTH_ECCSTATUS                    ; 3                                      ; Untyped           ;
+; DEVICE_FAMILY                      ; Cyclone IV GX                          ; Untyped           ;
+; CBXI_PARAMETER                     ; altsyncram_qv61                        ; Untyped           ;
++------------------------------------+----------------------------------------+-------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                           ;
++-------------------------------------------+------------------------------------------------+
+; Name                                      ; Value                                          ;
++-------------------------------------------+------------------------------------------------+
+; Number of entity instances                ; 1                                              ;
+; Entity Instance                           ; ROM:instruction_memory|altsyncram:memory_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                                            ;
+;     -- WIDTH_A                            ; 32                                             ;
+;     -- NUMWORDS_A                         ; 64                                             ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                   ;
+;     -- WIDTH_B                            ; 1                                              ;
+;     -- NUMWORDS_B                         ; 1                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                         ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                   ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                           ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                      ;
++-------------------------------------------+------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "ProgrammCounter:pc_unit" ;
++-------------------+-------+----------+--------------+
+; Port              ; Type  ; Severity ; Details      ;
++-------------------+-------+----------+--------------+
+; jump_target[1..0] ; Input ; Info     ; Stuck at GND ;
++-------------------+-------+----------+--------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Tue Mar 03 12:48:38 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PipelineMips -c PipelineMips
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file pipelinemips.sv
+    Info (12023): Found entity 1: PipelineMips
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
+    Info (12023): Found entity 1: RegFile
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file controlunit.sv
+    Info (12023): Found entity 1: ControlUnit
+Info (12021): Found 1 design units, including 1 entities, in source file ram.sv
+    Info (12023): Found entity 1: RAM
+Info (12021): Found 1 design units, including 1 entities, in source file rom.sv
+    Info (12023): Found entity 1: ROM
+Info (12021): Found 1 design units, including 1 entities, in source file testpipelinemips.sv
+    Info (12023): Found entity 1: TestPipelineMips
+Info (12021): Found 1 design units, including 1 entities, in source file programmcounter.sv
+    Info (12023): Found entity 1: ProgrammCounter
+Info (12127): Elaborating entity "PipelineMips" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at PipelineMips.sv(159): object "read_data1_ex_reg" assigned a value but never read
+Warning (10240): Verilog HDL Always Construct warning at PipelineMips.sv(68): inferring latch(es) for variable "id_ex_reg", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at PipelineMips.sv(130): inferring latch(es) for variable "ex_mem_reg", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at PipelineMips.sv(177): inferring latch(es) for variable "mem_wb_reg", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "ProgrammCounter" for hierarchy "ProgrammCounter:pc_unit"
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:instruction_memory"
+Warning (10850): Verilog HDL warning at ROM.sv(8): number of words (48) in memory file does not match the number of elements in the address range [0:63]
+Warning (10030): Net "memory.data_a" at ROM.sv(4) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "memory.waddr_a" at ROM.sv(4) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "memory.we_a" at ROM.sv(4) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:controller"
+Warning (10270): Verilog HDL Case Statement warning at ControlUnit.sv(17): incomplete case statement has no default case item
+Info (12128): Elaborating entity "RegFile" for hierarchy "RegFile:registers_unit"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu_unit"
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:data_mem"
+Warning (10850): Verilog HDL warning at RAM.sv(19): number of words (12) in memory file does not match the number of elements in the address range [0:127]
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "RegFile:registers_unit|registers" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "RegFile:registers_unit|registers" is uninferred due to asynchronous read logic
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/altera/13.1/PipelineMips/db/PipelineMips.ram0_RegFile_be88a862.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ROM:instruction_memory|memory_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 6
+        Info (286033): Parameter NUMWORDS_A set to 64
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/PipelineMips.ram0_ROM_16bd8.hdl.mif
+Info (12130): Elaborated megafunction instantiation "ROM:instruction_memory|altsyncram:memory_rtl_0"
+Info (12133): Instantiated megafunction "ROM:instruction_memory|altsyncram:memory_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "6"
+    Info (12134): Parameter "NUMWORDS_A" = "64"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/PipelineMips.ram0_ROM_16bd8.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_qv61.tdf
+    Info (12023): Found entity 1: altsyncram_qv61
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (144001): Generated suppressed messages file C:/altera/13.1/PipelineMips/output_files/PipelineMips.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 10212 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 160 output pins
+    Info (21061): Implemented 10018 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4709 megabytes
+    Info: Processing ended: Tue Mar 03 12:48:47 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:09
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/altera/13.1/PipelineMips/output_files/PipelineMips.map.smsg.
+
+

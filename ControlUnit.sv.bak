@@ -1,0 +1,7 @@
+module control_unit (
+    input logic [5:0] opcode,
+    output logic reg_write, output logic mem_to_reg, output logic mem_write, 
+    output logic alu_src, output logic reg_dst, output logic jump,
+    output logic [1:0] alu_control
+);
+endmodule

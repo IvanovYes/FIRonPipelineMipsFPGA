@@ -1,0 +1,19 @@
+module ALU(
+    input logic [31:0] alu_a, alu_b, alu_result_mem, wb_result,
+    input logic [1:0] alu_control,
+    input logic alu_src,
+    input logic [31:0] sign_ext_imm,
+    output logic [31:0] alu_result
+);
+    logic [31:0] src_b;
+    
+    // Выбор второго операнда (register или immediate)
+    assign src_b = alu_src ? sign_ext_imm : alu_b;
+    
+    always_comb begin
+        case(alu_control)
+            2'b10: alu_result = src_a + src_b;  // ADD
+            default: alu_result = 32'b0;
+        endcase
+    end
+endmodule

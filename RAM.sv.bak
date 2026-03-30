@@ -1,0 +1,30 @@
+module RAM(
+    input logic clk,
+    input logic reset,
+    input logic mem_write,
+    input logic [31:0] address,
+    input logic [31:0] write_data,
+    output logic [31:0] read_data
+);
+    // Память данных: 4 слова по 32 бита
+    logic [31:0] memory [0:31];
+    
+    // Чтение (асинхронное)
+    assign read_data = memory[address[6:2]];
+    
+    // Запись(синхронная)
+    always_ff @(posedge clk or posedge reset) 
+	 begin
+	 if (reset) begin
+		  //memory [0] = '{default: 'x};  Задание нопредленных значений памяти при сбросе (эмуляция энергозависимости памяти)
+		  // $readmemh("data_test.dat", memory)
+		  memory[0] <= 32'h0000000F;
+        memory[1] <= 32'h00000010;
+        memory[2] <= 32'h0000001F;
+        memory[3] <= 32'h00000000;
+	 end
+	 else if (mem_write) begin
+        memory[address[6:2]] <= write_data;
+    end
+	 end
+endmodule
