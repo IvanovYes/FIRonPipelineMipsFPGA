@@ -19,6 +19,7 @@
 
 Реализация была проверена с помощью относительно сложной тестовой программы - КИХ-фильтра скользящего среднего.
 
-<img width="887" height="789" alt="image" src="https://github.com/user-attachments/assets/df7f3b0a-aff3-41b7-9941-ca94c31a0317" />
+<img width="874" height="785" alt="image" src="https://github.com/user-attachments/assets/bbdbbac3-cbb7-46fe-8ae3-3b96d5e86674" />
+
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/69379bbf-0323-480a-a53b-7e26ab004ccb" />
