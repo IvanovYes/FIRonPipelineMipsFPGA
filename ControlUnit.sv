@@ -15,7 +15,7 @@ module ControlUnit (
         alu_op    = 2'b00; // R-type
         jump      = 1'b0;
         case (opcode)
-            6'b000000: begin // R-type (add, slt)
+            6'b000000: begin // R-type (add, slt, srav)
                 reg_dst   = 1'b1;
                 alu_src   = 1'b0;
                 reg_write = 1'b1;
@@ -67,6 +67,7 @@ module ControlUnit (
             2'b01: alu_control = 3'b110; // SUB для bne
             2'b10: begin                 // R-type: add, slt
                 case (funct)
+						  6'b000111: alu_control = 3'b000; // srav
                     6'b100000: alu_control = 3'b010; // add
                     6'b101010: alu_control = 3'b111; // slt
 						  default:   alu_control = 3'b000;

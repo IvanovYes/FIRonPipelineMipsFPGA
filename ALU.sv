@@ -15,6 +15,7 @@ module ALU(
 	
     always_comb begin
         case (alu_control)
+				3'b000: alu_result = $signed(alu_b) >>> alu_a[4:0]; // SRA
 				3'b001: alu_result = alu_a | imm_modified; //OR
 				3'b010: alu_result = alu_a + src_b;      // ADD
             3'b011: alu_result = ~(alu_a | src_b);   // NOR (для bne)

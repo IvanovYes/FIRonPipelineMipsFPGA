@@ -1,8 +1,9 @@
 module PipelineMips (
     input logic clk, reset,
-    output wire [31:0] pc, instruction_ex, alu_result_mem, read_data_mem, write_data_mem);
+	 output wire mem_write,
+    output wire [31:0] pc, instruction_ex, alu_result_mem, read_data_mem, write_data_mem, alu_result_ex);
 	 
-    // Стадия извлечения инструкции
+    // Стадия извлечения инструкции IF
 	 logic [31:0] pc_plus_4_if, instruction_if, jump_target;
     logic [31:0] pc_branch_mem;
     logic pc_src_mem;
@@ -32,7 +33,7 @@ module PipelineMips (
         end
     end
     
-    // Стадия извлечения инструкции
+    // Стадия декодирования инструкции ID
 	 logic [31:0] read_data1_id, read_data2_id;
     logic reg_write_id, mem_to_reg_id, mem_write_id;
     logic alu_src_id, reg_dst_id, branch_id;
@@ -87,15 +88,15 @@ module PipelineMips (
         end
     end
     
-    // Стадия извлечения инструкции EX
-    logic [31:0] alu_result_ex, pc_branch_ex;
+    // Стадия выполнения инструкции EX
+    logic [31:0] read_data1_ex, read_data2_ex, pc_branch_ex;
     logic [4:0] write_reg_ex;
     logic zero_ex;
     logic [31:0] sign_ext_imm;
     wire [31:0] wb_result;
     wire [31:0] pc_plus_4_ex      = id_ex_reg[159:128];
-    wire [31:0] read_data1_ex     = id_ex_reg[127:96];
-    wire [31:0] read_data2_ex     = id_ex_reg[95:64];
+    assign read_data1_ex     = id_ex_reg[127:96];
+    assign read_data2_ex     = id_ex_reg[95:64];
 	 assign instruction_ex = id_ex_reg[63:32];
     wire [2:0]  alu_control_ex = id_ex_reg[31:29];
     wire        reg_dst_ex     = id_ex_reg[28];
@@ -151,7 +152,7 @@ module PipelineMips (
         end
     end
     
-    // Стадия извлечения инструкции MEM
+    // Стадия чтения/записи в память MEM
 	 assign alu_result_mem = ex_mem_reg[168:137];
 	 assign write_data_mem = ex_mem_reg[136:105];
     wire [4:0]  write_reg_mem  = ex_mem_reg[104:100];
@@ -195,7 +196,7 @@ module PipelineMips (
         end
     end
     
-    // Стадия извлечения инструкции WB
+    // Стадия обратной записи в регистровый файл WB
 	 (* preserve *) reg [31:0] wb_result_comb;
 	 always @(*) begin
 		 case (mem_wb_reg[26])
@@ -205,5 +206,5 @@ module PipelineMips (
 		 endcase
 	 end
 	 assign wb_result = wb_result_comb;
-    
+	 assign mem_write = ex_mem_reg[29];
 endmodule

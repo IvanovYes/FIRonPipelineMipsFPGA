@@ -3,7 +3,7 @@ module RAM(
     input logic [31:0] address, write_data,
     output logic [31:0] read_data);
 	 
-    // Память данных: 4 слова по 32 бита
+    // Память данных: 128 слов по 32 бита
     logic [31:0] memory [0:127];
     
     // Чтение (асинхронное)

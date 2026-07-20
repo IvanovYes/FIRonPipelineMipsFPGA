@@ -53,18 +53,133 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
-#           File in use by: ACER1  Hostname: LAPTOP-0A8LG1PG  ProcessID: 8012
+#           File in use by: ACER1  Hostname: LAPTOP-0A8LG1PG  ProcessID: 17916
 # 
-#           Attempting to use alternate WLF file "./wlfti6ayka".
+#           Attempting to use alternate WLF file "./wlftx8f20j".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlfti6ayka
+#           Using alternate file: ./wlftx8f20j
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Break in Module TestPipelineMips at C:/altera/13.1/PipelineMips/TestPipelineMips.sv line 28
-# Simulation Breakpoint: Break in Module TestPipelineMips at C:/altera/13.1/PipelineMips/TestPipelineMips.sv line 28
+# SMA_result =         590	alu_result =        260
+# SMA_result =         731	alu_result =        264
+# SMA_result =         742	alu_result =        268
+# SMA_result =         669	alu_result =        272
+# SMA_result =         679	alu_result =        276
+# SMA_result =         662	alu_result =        280
+# SMA_result =         604	alu_result =        284
+# SMA_result =         598	alu_result =        288
+# SMA_result =         534	alu_result =        292
+# SMA_result =         543	alu_result =        296
+# SMA_result =         490	alu_result =        300
+# SMA_result =         488	alu_result =        304
+# SMA_result =         440	alu_result =        308
+# SMA_result =         289	alu_result =        312
+# SMA_result =         104	alu_result =        316
+# SMA_result =         -99	alu_result =        320
+# SMA_result =        -244	alu_result =        324
+# SMA_result =        -465	alu_result =        328
+# SMA_result =        -487	alu_result =        332
+# SMA_result =        -440	alu_result =        336
+# SMA_result =        -423	alu_result =        340
+# SMA_result =         -82	alu_result =        344
+# SMA_result =          68	alu_result =        348
+# SMA_result =         133	alu_result =        352
+# SMA_result =         210	alu_result =        356
+# SMA_result =         227	alu_result =        360
+# SMA_result =         181	alu_result =        364
+# SMA_result =        -129	alu_result =        368
+# SMA_result =        -409	alu_result =        372
+# SMA_result =        -909	alu_result =        376
+# SMA_result =       -1013	alu_result =        380
+# SMA_result =       -1095	alu_result =        384
+# SMA_result =       -1091	alu_result =        388
+# SMA_result =        -941	alu_result =        392
+# SMA_result =        -793	alu_result =        396
+# SMA_result =        -483	alu_result =        400
+# SMA_result =        -155	alu_result =        404
+# SMA_result =         345	alu_result =        408
+# SMA_result =         504	alu_result =        412
+# SMA_result =         646	alu_result =        416
+# SMA_result =         709	alu_result =        420
+# SMA_result =         675	alu_result =        424
+# SMA_result =         466	alu_result =        428
+# SMA_result =         405	alu_result =        432
+# SMA_result =         242	alu_result =        436
+# SMA_result =          32	alu_result =        440
+# SMA_result =         -43	alu_result =        444
+# SMA_result =        -202	alu_result =        448
+# SMA_result =        -255	alu_result =        452
+# SMA_result =        -205	alu_result =        456
+# SMA_result =           3	alu_result =        460
+# SMA_result =         114	alu_result =        464
+# SMA_result =         450	alu_result =        468
+# SMA_result =         471	alu_result =        472
+# SMA_result =         588	alu_result =        476
+# SMA_result =         712	alu_result =        480
+# SMA_result =         704	alu_result =        484
+# SMA_result =         565	alu_result =        488
+# SMA_result =         551	alu_result =        492
+# SMA_result =         532	alu_result =        496
+# SMA_result =         375	alu_result =        500
+# SMA_result =         398	alu_result =        504
+# SMA_result =         361	alu_result =        508
+# SMA_result =         445	alu_result =        512
+# SMA_result =         521	alu_result =        516
+# SMA_result =         659	alu_result =        520
+# SMA_result =         652	alu_result =        524
+# SMA_result =         628	alu_result =        528
+# SMA_result =         597	alu_result =        532
+# SMA_result =         574	alu_result =        536
+# SMA_result =         544	alu_result =        540
+# SMA_result =         498	alu_result =        544
+# SMA_result =         435	alu_result =        548
+# SMA_result =         348	alu_result =        552
+# SMA_result =         251	alu_result =        556
+# SMA_result =         125	alu_result =        560
+# SMA_result =           3	alu_result =        564
+# SMA_result =        -113	alu_result =        568
+# SMA_result =        -221	alu_result =        572
+# SMA_result =        -267	alu_result =        576
+# SMA_result =        -272	alu_result =        580
+# SMA_result =        -243	alu_result =        584
+# SMA_result =        -186	alu_result =        588
+# SMA_result =        -100	alu_result =        592
+# SMA_result =         -16	alu_result =        596
+# SMA_result =          23	alu_result =        600
+# SMA_result =          24	alu_result =        604
+# SMA_result =         -79	alu_result =        608
+# SMA_result =        -214	alu_result =        612
+# SMA_result =        -368	alu_result =        616
+# SMA_result =        -530	alu_result =        620
+# SMA_result =        -676	alu_result =        624
+# SMA_result =        -798	alu_result =        628
+# SMA_result =        -842	alu_result =        632
+# SMA_result =        -810	alu_result =        636
+# SMA_result =        -654	alu_result =        640
+# SMA_result =        -464	alu_result =        644
+# SMA_result =        -246	alu_result =        648
+# SMA_result =         -21	alu_result =        652
+# SMA_result =         181	alu_result =        656
+# SMA_result =         338	alu_result =        660
+# SMA_result =         449	alu_result =        664
+# SMA_result =         499	alu_result =        668
+# SMA_result =         459	alu_result =        672
+# SMA_result =         391	alu_result =        676
+# SMA_result =         285	alu_result =        680
+# SMA_result =         165	alu_result =        684
+# SMA_result =          55	alu_result =        688
+# SMA_result =          -3	alu_result =        692
+# SMA_result =         -40	alu_result =        696
+# SMA_result =         -14	alu_result =        700
+# SMA_result =          41	alu_result =        704
+# SMA_result =         120	alu_result =        708
+# SMA_result =         234	alu_result =        712
+# SMA_result =         354	alu_result =        716
+# Break in Module TestPipelineMips at C:/altera/13.1/PipelineMips/TestPipelineMips.sv line 74
+# Simulation Breakpoint: Break in Module TestPipelineMips at C:/altera/13.1/PipelineMips/TestPipelineMips.sv line 74
 # MACRO ./PipelineMips_run_msim_gate_systemverilog.do PAUSED at line 17

@@ -1,0 +1,4 @@
+# vsim work.testbench 
+# ** Error: (vsim-3170) Could not find 'C:/altera/13.1/PipelineMips/simulation/modelsim/gate_work.testbench'.
+# 
+# Error loading design
